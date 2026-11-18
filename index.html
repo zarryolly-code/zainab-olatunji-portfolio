@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The professional portfolio of Zainab Olatunji — researcher in the making, educator, CHRP, software developer, virtual assistant and entrepreneur.">
+  <meta name="theme-color" content="#0b1f42">
+  <title>Zainab Olatunji | Professional Portfolio</title>
+  <style>
+    :root{--navy:#0b1f42;--blue:#173d70;--orange:#f59e0b;--ink:#17243a;--muted:#627086;--paper:#f6f8fc;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(11,31,66,.97);color:white;position:sticky;top:0;z-index:20;box-shadow:0 5px 22px #07152b22}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;font-size:1.15rem;letter-spacing:.2px}.brand span{color:var(--orange)}
+    nav{display:flex;gap:22px;align-items:center;font-size:.9rem}nav a{opacity:.9}nav a:hover{color:var(--orange)}
+    .menu{display:none;background:none;border:1px solid #ffffff55;color:white;border-radius:9px;padding:8px 12px;font-size:1.1rem}
+    .hero{background:linear-gradient(115deg,#091a38 0%,#123665 62%,#1a4678 100%);color:white;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:46px;min-height:570px;padding:65px 0}
+    .eyebrow{color:#ffc45c;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800}
+    h1{font-size:clamp(2.7rem,6vw,4.7rem);line-height:1.04;margin:15px 0 18px;letter-spacing:-2px}h1 span{color:var(--orange)}
+    .hero h2{font-size:1.25rem;font-weight:500;margin:0 0 14px;color:#e9f0fb}.hero p{max-width:630px;color:#d5e0ef;font-size:1.05rem}
+    .pills{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}.pill{border:1px solid #ffffff55;border-radius:30px;padding:7px 13px;font-size:.83rem;color:#f5f8ff}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:30px;padding:12px 20px;font-weight:750;background:var(--orange);color:#171d29;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px #f59e0b44}.btn.alt{background:transparent;color:white;border:1px solid #ffffff80}
+    .portrait-frame{position:relative;max-width:440px;margin-left:auto}.portrait-frame:before{content:"";position:absolute;inset:20px -18px -18px 18px;border:3px solid var(--orange);border-radius:26px}.portrait{width:100%;height:480px;object-fit:cover;object-position:center 25%;border-radius:24px;position:relative;box-shadow:0 22px 55px #0005}
+    section{padding:76px 0}.section-head{margin-bottom:28px}.kicker{color:#d88900;text-transform:uppercase;font-size:.76rem;letter-spacing:1.8px;font-weight:800}.section-head h2{font-size:2rem;color:var(--navy);margin:5px 0}.section-head p{color:var(--muted);max-width:700px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}.about-copy,.soft-card{background:white;border:1px solid #e5eaf2;border-radius:18px;padding:28px;box-shadow:0 8px 25px #0b1f4209}.about-copy p{margin-top:0}.note{border-left:4px solid var(--orange);padding:10px 16px;background:#fff8e9;border-radius:0 10px 10px 0;color:#58421a}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #e5eaf2;border-radius:16px;padding:23px;box-shadow:0 8px 25px #0b1f4208}.card .symbol{width:42px;height:42px;border-radius:12px;background:#fff1d6;color:#9b6100;display:grid;place-items:center;font-size:1.2rem;font-weight:900}.card h3{margin:13px 0 6px;color:var(--navy)}.card p{color:var(--muted);margin:0;font-size:.94rem}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.skill{background:white;border:1px solid #e5eaf2;border-radius:12px;padding:14px 16px;font-weight:650;color:#233a5d}
+    .project{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center}.project-mark{height:100px;border-radius:15px;background:var(--navy);color:white;display:grid;place-items:center;font-weight:900;font-size:1.45rem;text-align:center}.project-mark.orange{background:#edf4fb;color:var(--blue);border:1px solid #d9e4f1}.project a.inline{color:#a96600;font-weight:800}
+    .timeline{display:grid;gap:15px}.timeline-item{display:grid;grid-template-columns:14px 1fr;gap:15px}.dot{width:12px;height:12px;border-radius:50%;background:var(--orange);margin-top:8px;box-shadow:0 0 0 5px #fff0d5}.timeline-item h3{margin:0;color:var(--navy);font-size:1.05rem}.timeline-item p{margin:3px 0 0;color:var(--muted)}
+    .contact{background:var(--navy);color:white}.contact .section-head h2{color:white}.contact .section-head p{color:#d3deee}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{background:#ffffff0c;border:1px solid #ffffff22;border-radius:16px;padding:25px}.contact-card p{margin:10px 0;color:#e3eaf5}.contact-card a{color:#ffc45c}.contact-cta{display:inline-block;margin-top:12px}
+    footer{background:#07152e;color:#cbd5e1;padding:22px 0;font-size:.87rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:35px;padding:50px 0}.portrait-frame{margin:0 auto;max-width:390px}.portrait{height:420px}.about-grid,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:18px 5%;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
+    @media(max-width:520px){section{padding:56px 0}.cards,.skills{grid-template-columns:1fr 1fr}.project{grid-template-columns:82px 1fr;gap:13px}.project-mark{height:82px;font-size:1.1rem}.portrait{height:370px}.about-copy,.soft-card{padding:21px}.nav{height:68px}nav{top:68px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">ZAINAB <span>OLATUNJI</span></a>
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <nav id="nav"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Professional Profile</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><div class="eyebrow">Technology · Education · Research · Business</div>
+    <h1>Hello, I’m<br><span>Zainab Olatunji</span></h1>
+    <h2>Researcher in the making · Educator · CHRP</h2>
+    <p>I bring together technology, education, human resource management and entrepreneurship to solve practical problems, support people and build meaningful solutions.</p>
+    <div class="pills"><span class="pill">Software Developer</span><span class="pill">Virtual Assistant</span><span class="pill">Educator</span><span class="pill">Entrepreneur</span></div>
+    <div class="actions"><a class="btn" href="#projects">Explore my work ↓</a><a class="btn alt" href="#contact">Let’s connect</a></div>
+  </div>
+  <div class="portrait-frame"><img class="portrait" src="assets/zainab-portrait.png" alt="Professional portrait of Zainab Olatunji"></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="section-head"><div class="kicker">A little about me</div><h2>Purpose, people and practical solutions.</h2><p>A multidisciplinary professional with interests and experience spanning learning, technology, business and people development.</p></div>
+  <div class="about-grid">
+    <div class="about-copy"><p>I’m Zainab Olatunji, an educator, CHRP, software developer, virtual assistant and entrepreneur. I enjoy learning, building useful digital solutions, supporting organised workflows and helping people and businesses move forward.</p><p>My work reflects a blend of analytical thinking, communication, problem-solving and a practical, service-oriented mindset.</p><div class="note"><strong>My ambition:</strong> to grow as a researcher and academic, and become a professor in the making, In Sha Allah.</div></div>
+    <div class="soft-card"><h3 style="margin-top:0;color:#0b1f42">What guides my work</h3><p>Curiosity and continuous learning</p><p>Integrity and professional responsibility</p><p>Clear communication and dependable support</p><p>Technology that solves real problems</p><p>Knowledge, service and sustainable impact</p></div>
+  </div>
+</div></section>
+
+<section id="expertise" style="background:#edf2f8"><div class="wrap">
+  <div class="section-head"><div class="kicker">What I bring</div><h2>Areas of expertise</h2><p>A broad skill set across digital development, administration, education and business operations.</p></div>
+  <div class="cards">
+    <article class="card"><div class="symbol">⌘</div><h3>Software Development</h3><p>Python, Django, web development, database-backed applications and practical digital products.</p></article>
+    <article class="card"><div class="symbol">✓</div><h3>Virtual Assistance</h3><p>Administrative support, online research, organisation, documentation and digital task coordination.</p></article>
+    <article class="card"><div class="symbol">HR</div><h3>Human Resources</h3><p>CHRP professional background and an interest in people management and workplace development.</p></article>
+    <article class="card"><div class="symbol">✎</div><h3>Education & Training</h3><p>Educational management, teaching, learning support and knowledge sharing.</p></article>
+    <article class="card"><div class="symbol">⌕</div><h3>Research & Writing</h3><p>Research development, academic writing and evidence-informed problem solving.</p></article>
+    <article class="card"><div class="symbol">↗</div><h3>Business Management</h3><p>Entrepreneurship, service operations, customer-focused thinking and business improvement.</p></article>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="section-head"><div class="kicker">Selected work</div><h2>Projects and ventures</h2><p>Practical work that reflects my interest in building, managing and improving services.</p></div>
+  <div class="cards">
+    <article class="card project"><div class="project-mark">ZeeBiz</div><div><h3>ZeeBiz Manager</h3><p>A business management platform designed to help businesses manage customers, services, quotations, invoices, receipts, payments and reports.</p><p><a class="inline" href="https://zeebizmanager.com.ng" target="_blank" rel="noopener">Visit ZeeBiz Manager ↗</a></p></div></article>
+    <article class="card project"><div class="project-mark orange">ELITEZ</div><div><h3>ELITEZ Integrated Services</h3><p>A professional cleaning and sanitation business serving residential, office and commercial cleaning needs.</p></div></article>
+    <article class="card"><div class="symbol">✦</div><h3>Digital & Administrative Support</h3><p>Developing a professional practice across virtual assistance, online research, documentation and organised business support.</p></article>
+  </div>
+</div></section>
+
+<section id="experience" style="background:#edf2f8"><div class="wrap">
+  <div class="section-head"><div class="kicker">Professional profile</div><h2>My work across different fields</h2></div>
+  <div class="timeline">
+    <div class="timeline-item"><span class="dot"></span><div><h3>Software Developer & Digital Builder</h3><p>Creator of ZeeBiz Manager, a Django-based business management application.</p></div></div>
+    <div class="timeline-item"><span class="dot"></span><div><h3>Virtual Assistant</h3><p>Offering a growing skill set in administrative, research and digital support.</p></div></div>
+    <div class="timeline-item"><span class="dot"></span><div><h3>CHRP & Human Resource Professional</h3><p>Professional development in human resource management and people-focused practice.</p></div></div>
+    <div class="timeline-item"><span class="dot"></span><div><h3>Educator</h3><p>Academic background in Educational Management, with an interest in teaching, learning and educational development.</p></div></div>
+    <div class="timeline-item"><span class="dot"></span><div><h3>Entrepreneur</h3><p>Founder of ELITEZ Integrated Services, a cleaning and sanitation business.</p></div></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <div class="section-head"><div class="kicker">Learning and growth</div><h2>Education & achievements</h2></div>
+  <div class="cards">
+    <article class="card"><div class="symbol">🎓</div><h3>B.Ed. Educational Management</h3><p>Economics Option · Ekiti State University</p></article>
+    <article class="card"><div class="symbol">HR</div><h3>CHRP</h3><p>Chartered Human Resource Professional credential.</p></article>
+    <article class="card"><div class="symbol">↗</div><h3>Continuous Development</h3><p>Technology, entrepreneurship, research and professional learning.</p></article>
+  </div>
+  <p style="color:#627086;margin-top:20px">Research and doctoral study remain important parts of my academic journey.</p>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="section-head"><div class="kicker">Start a conversation</div><h2>Let’s work, learn or build together.</h2><p>For professional opportunities, collaborations, project enquiries or business conversations, feel free to get in touch.</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>Contact details</h3><p>Email: <a href="mailto:zarryolly@gmail.com">zarryolly@gmail.com</a></p><p>Phone: <a href="tel:+2348053049284">+234 805 304 9284</a></p><p>Location: Ibadan, Nigeria</p><a class="btn contact-cta" href="mailto:zarryolly@gmail.com?subject=Professional%20Enquiry">Email me</a></div>
+    <div class="contact-card"><h3>What I’m open to</h3><p>Remote and flexible professional opportunities</p><p>Software and digital projects</p><p>Virtual assistance and administrative support</p><p>Education, research and professional collaborations</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Zainab Olatunji</span><span>Research · Education · Technology · Impact</span></div></footer>
+<script>
+  const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+  menu.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>nav.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
